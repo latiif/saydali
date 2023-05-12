@@ -1,0 +1,74 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+	/* Adjust to desired height */
+	font-family: 'Readex Pro', sans-serif;
+}
+
+
+.info {
+	font-size: xx-large;
+}
+
+
+
+.center {
+	text-align: center;
+	font-size: var(--h2-font-size);
+	/* Styles for the centered div */
+	font-size: var(--h2-font-size);
+	max-width: 40em;
+	padding: var(--padding-size);
+	margin: var(--margin-size);
+	border-radius: var(--border-radius);
+	background: #FFF;
+	border: 1px solid #0484;
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+	background-size: 10px 10px;
+}
+
+#open_in_maps {
+	font-size: var(--button-font-size);
+	direction: rtl;
+}
+
+:root {
+	--base-scale: calc(100vw / 75);
+	--h2-font-size: max(1em, min(4em, calc(var(--base-scale) * 4)));
+	--button-font-size: max(1em, min(2em, calc(var(--base-scale) * 2)));
+	--padding-size: max(1em, min(2em, calc(var(--base-scale) * 2)));
+	--margin-size: max(0.5em, min(2em, calc(var(--base-scale) * 2)));
+	--border-radius: max(1em, min(3em, calc(var(--base-scale) * 3)));
+}
+
+.btn {
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: xx-large;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
