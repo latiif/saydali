@@ -1,8 +1,9 @@
 .container {
+	direction: rtl;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 100%;
 	text-align: center;
 	/* Adjust to desired height */
 	font-family: 'Readex Pro', sans-serif;
@@ -14,13 +15,16 @@
 }
 
 
+tr>td {
+	padding: 0.25em;
+}
 
 .center {
 	text-align: center;
 	font-size: var(--h2-font-size);
 	/* Styles for the centered div */
 	font-size: var(--h2-font-size);
-	max-width: 40em;
+	max-width: 90%;
 	padding: var(--padding-size);
 	margin: var(--margin-size);
 	border-radius: var(--border-radius);
