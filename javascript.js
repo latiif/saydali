@@ -246,26 +246,9 @@ $(document).ready(function () {
     // instead of doing this two times (possibly three)
     // we do it dynamically for each shift
     for (let i = 0; i < 2; i++) {
-        // Get the button element by its ID
-        var myButton = $(`#open_in_maps_${i + 1}`);
         const pharmacies = dicts[i][key];
-        console.log(pharmacies)
         // Update the contents of the div with ID "name"
-        //$(`#name_${i + 1}`).html(`<b>${dicts[i][key]}</b>`);
         $(`#name_${i + 1}`).html(generateTable(pharmacies));
-        console.log(generateTable(pharmacies));
-        // Update the contents of the button
-        $(`#open_in_maps_${i + 1}`).html(`افتح موقع ${dicts[i][key]} في خرائط جوجل`);
-        // Add click event handler to the button
-        myButton.click(function () {
-            // Define the URL of the link you want to open
-            var linkUrl = pharmacyLocation[dicts[i][key]];
-
-            if (!linkUrl == "") {
-                // Open the link in a new window
-                window.open(linkUrl, '_blank');
-            }
-        });
     }
 });
 
@@ -276,7 +259,7 @@ const x = function () {
 
 const generatePharmacyEntry = function (pharmacies) {
     return pharmacies.map(pharmacy => {
-        return `<tr> <td>${pharmacy}</td> <td> <a href="${pharmacyLocation[pharmacy]}" class="btn">افتح الموقع</a> </td>  </tr>`
+        return `<tr> <td>${pharmacy}</td> <td> <a target="_blank" href="${pharmacyLocation[pharmacy]}"  class="btn">افتح الموقع</a> </td>  </tr>`
     }).join("")
 }
 
