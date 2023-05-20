@@ -252,17 +252,20 @@ const pharmacyLocation = {
     "صيدلية محمد حاج أسعد": "https://maps.app.goo.gl/fG8shzoY8mknMvEw8",
     "صيدلية إيناس": "https://maps.google.com/?q=35.929168,36.628203&entry=gps",
     "صيدلية بتول الأحمد": "https://maps.google.com/?q=Idlib%2C+Syria&ftid=0x1525080bb117c185:0xf032ea18c7377951&entry=gps",
-	"صيدلية هنادي قوصرة":"https://maps.google.com/?q=35.937679,36.632439&entry=gps",
-	
+    "صيدلية هنادي قوصرة": "https://maps.google.com/?q=35.937679,36.632439&entry=gps",
+
 }
 
 
 $(document).ready(function () {
-    const today = new Date(); // Get the current date
+    const today = new Date(""); // Get the current date
 
     $(`#date`).html(today.toLocaleDateString("ar-SY", { weekday: 'long' }) + " " + today.toLocaleDateString("ar-SY"))
 
-    const shouldShowAfternoonShift = today.getHours() < 17;
+    const shouldShowAfternoonShift = today.getHours() >= 9 && today.getHours() < 17;
+    const shouldShowFridayShift = today.getHours() < 21 && today.getDay() === 5;
+    const shouldShowFirstShift = today.getHours() >= 9 && today.getHours() < 21;
+    const shouldShowSecondShift = true; //today.getHours() < 9;
 
     // Subtract 9 hours from the current time
     const hoursToSubtract = 9;
@@ -274,17 +277,46 @@ $(document).ready(function () {
     const key = `${year}-${month}-${day}`; // Create the date string in "year-month-day" format
 
 
-    const dicts = [firstShift, secondShift, thirdShift];
-    // instead of doing this two times (possibly three)
-    // we do it dynamically for each shift
-    for (let i = 0; i < 3; i++) {
-        if (!shouldShowAfternoonShift && i == 2) {
-            $("#afternoon_shift").css("display", "none");
-            continue
+    // If it's Friday!
+    if (today.getDay() === 5) {
+        $("#afternoon_shift").css("display", "none");
+        if (!shouldShowFridayShift) {
+            $("#friday_shift").css("display", "none");
+        } else {
+            const fridayPharmacies = thirdShift[key];
+            $(`#name_friday`).html(generateTable(fridayPharmacies));
         }
-        const pharmacies = dicts[i][key];
-        // Update the contents of the div with ID "name"
-        $(`#name_${i + 1}`).html(generateTable(pharmacies));
+        if (!shouldShowFirstShift) {
+            $("#first_shift").css("display", "none");
+        } else {
+            $(`#name_1`).html(generateTable(firstShift[key]));
+        }
+        if (!shouldShowSecondShift) {
+            $("#second_shift").css("display", "none");
+        } else {
+            $(`#name_2`).html(generateTable(secondShift[key]));
+        }
+    } else {
+        $("#friday_shift").css("display", "none");
+        const dicts = [firstShift, secondShift, thirdShift];
+        // instead of doing this two times (possibly three)
+        // we do it dynamically for each shift
+        if (!shouldShowAfternoonShift) {
+            $("#afternoon_shift").css("display", "none");
+        } else {
+            $(`#name_3`).html(generateTable(thirdShift[key]));
+        }
+        if (!shouldShowFirstShift) {
+            $("#first_shift").css("display", "none");
+        } else {
+            $(`#name_1`).html(generateTable(firstShift[key]));
+        }
+        if (!shouldShowSecondShift) {
+            $("#second_shift").css("display", "none");
+        } else {
+            $(`#name_2`).html(generateTable(secondShift[key]));
+        }
+
     }
 });
 
