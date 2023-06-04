@@ -77,3 +77,13 @@ tr>td {
 	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
 	text-decoration: none;
 }
+
+footer {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: navy;
+	color: white;
+	text-align: center;
+}
