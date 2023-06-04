@@ -264,13 +264,13 @@ const pharmacyLocation = {
 
 
 $(document).ready(function () {
-    const today = new Date(); // Get the current date
+    const today = new Date("5 june 2023 9:01"); // Get the current date
 
     $(`#date`).html(today.toLocaleDateString("ar-SY", { weekday: 'long' }) + " " + today.toLocaleDateString("ar-SY"))
 
     const shouldShowAfternoonShift = today.getHours() >= 9 && today.getHours() < 17;
     const shouldShowFridayShift = today.getHours() < 21 && today.getDay() === 5;
-    const shouldShowFirstShift = today.getHours() >= 9 && today.getHours() < 21;
+    const shouldShowFirstShift = [0, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23].includes(today.getHours())
     const shouldShowSecondShift = true; //today.getHours() < 9;
 
     // Subtract 9 hours from the current time
