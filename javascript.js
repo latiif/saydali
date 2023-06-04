@@ -264,7 +264,7 @@ const pharmacyLocation = {
 
 
 $(document).ready(function () {
-    const today = new Date("5 june 2023 9:01"); // Get the current date
+    const today = new Date(); // Get the current date
 
     $(`#date`).html(today.toLocaleDateString("ar-SY", { weekday: 'long' }) + " " + today.toLocaleDateString("ar-SY"))
 
