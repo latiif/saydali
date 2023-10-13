@@ -104,14 +104,6 @@ const thirdShift = {
     "2023-10-29": ["صيدلية سوسن السعيد"],
     "2023-10-30": ["صيدلية سوسن السعيد"],
     "2023-10-31": ["صيدلية سوسن السعيد"],
-
-
-
-
-
-
-
-
 };
 
 
@@ -289,7 +281,6 @@ $(document).ready(function () {
 
     $(`#date`).html(today.toLocaleDateString("ar-SY", { weekday: 'long' }) + " " + today.toLocaleDateString("ar-SY"))
 
-    const shouldShowAfternoonShift = today.getHours() >= 9 && today.getHours() < 17;
     const shouldShowFridayShift = today.getHours() < 21 && today.getDay() === 5;
     const shouldShowFirstShift = [0, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23].includes(today.getHours())
     const shouldShowSecondShift = true; //today.getHours() < 9;
@@ -325,14 +316,9 @@ $(document).ready(function () {
         }
     } else {
         $("#friday_shift").css("display", "none");
-        const dicts = [firstShift, secondShift, thirdShift];
+        $("#afternoon_shift").css("display", "none");
         // instead of doing this two times (possibly three)
         // we do it dynamically for each shift
-        if (!shouldShowAfternoonShift) {
-            $("#afternoon_shift").css("display", "none");
-        } else {
-            $(`#name_3`).html(generateTable(thirdShift[key]));
-        }
         if (!shouldShowFirstShift) {
             $("#first_shift").css("display", "none");
         } else {
@@ -347,10 +333,6 @@ $(document).ready(function () {
     }
 });
 
-
-const x = function () {
-    return "1"
-}
 
 const generatePharmacyEntry = function (pharmacies) {
     return pharmacies.map(pharmacy => {
