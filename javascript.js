@@ -204,7 +204,7 @@ const pharmacyLocation = {
     "صيدلية الصناع": "https://maps.app.goo.gl/8h78DTttge57bdhC7",
     "صيدلية منال الأسعد": "https://maps.app.goo.gl/jt9kmVeMmJpGivbo7",
     "صيدلية منال أسعد": "https://maps.app.goo.gl/jt9kmVeMmJpGivbo7",
-    "صيدلية حسناء دويدري": "https://maps.app.goo.gl/tXLJHEGo2nk8jkhk8",
+    "صيدلية حسناء دويدري": "https://maps.app.goo.gl/eQxwRnKPPFSckwy99",
     "صيدلية محمد(عبد الجواد سابقا)": "https://maps.app.goo.gl/GwiJYYRbrQCKKWPMA",
     "صيدلية العيسى": "https://maps.app.goo.gl/HdRv9T5HaV764bsz7",
     "صيدلية الولاء": "https://maps.app.goo.gl/9zQcxHuhYukAZQG88",
