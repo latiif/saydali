@@ -279,6 +279,7 @@ const pharmacyAddress = {
     "صيدلية نور حمادة": "الشيخ ثلث",
     "صيدلية عفراء شرابي": "غرب حديقة التحرير شمال جامع شعيب",
     "صيدلية الحسن": "غرب جامع سعد-مقابل ملحمة النور-مقابل مفرق معهد معاذ",
+    "صيدلية ريتاد عبيد": "خلف جامع الحسين زاوية مدرسه الفتح (البعث سابقا)",
 }
 
 const pharmacyLocation = {
@@ -452,6 +453,7 @@ const pharmacyLocation = {
     "صيدلية نور حمادة": "https://maps.app.goo.gl/ecjfe2zzHmorURGo7",
     "صيدلية الحسن": "https://maps.app.goo.gl/FAEnf8NEMKQkEJGo8",
     "صيدلية عفراء شرابي": "https://maps.app.goo.gl/WfXhoTsZS2rjxwSK9",
+    "صيدلية ريتاد عبيد": "https://maps.app.goo.gl/iAFAcenM44Bu5fov5",
 }
 
 
