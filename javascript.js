@@ -457,6 +457,8 @@ const pharmacyLocation = {
     "صيدلية عفراء شرابي": "https://maps.app.goo.gl/WfXhoTsZS2rjxwSK9",
     "صيدلية ريتاد عبيد": "https://maps.app.goo.gl/iAFAcenM44Bu5fov5",
 	"صيدلية الجواد": "https://maps.app.goo.gl/7pY2b5VixJcmRXEs7",
+"صيدلية رنيم كردي": "https://maps.app.goo.gl/WZJk4kq2Sx6BtHm36",
+"صيدلية الكندي" : "https://maps.app.goo.gl/qjPqSJtXZ22JyetY8",
 }
 
 
