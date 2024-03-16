@@ -484,8 +484,8 @@ $(document).ready(function () {
     const shouldShowFirstShift = [0, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23].includes(today.getHours())
     const shouldShowSecondShift = true; //today.getHours() < 9;
 
-    // Subtract 9 hours from the current time
-    const hoursToSubtract = 9;
+    // Subtract 8 hours from the current time
+    const hoursToSubtract = 8;
     today.setTime(today.getTime() - hoursToSubtract * 60 * 60 * 1000);
 
     const year = today.getFullYear();
