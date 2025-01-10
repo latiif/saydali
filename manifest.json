@@ -1,6 +1,7 @@
 {
   "name": "صيدلي",
   "short_name": "صيدلي",
+  "description": "جدول المناوبات للصيدليات في مدينة ادلب",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
